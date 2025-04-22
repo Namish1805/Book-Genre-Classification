@@ -1,31 +1,48 @@
-# 📚 Book Genre Classification using Metadata
+# 📚 Book Genre Classification Using Metadata
 
-This project aims to classify books into genres based on their metadata features such as **author popularity**, **book length**, and **number of keywords**. We use machine learning techniques to build and evaluate a classifier.
-
-## 🔍 Problem Statement
-
-Given metadata about a book, predict its genre. The goal is to help categorize books efficiently without needing to manually read or tag them.
-
-### Features used:
-- `author_popularity` – A numerical score showing how popular the author is.
-- `book_length` – Total number of pages in the book.
-- `num_keywords` – Number of keywords/tags associated with the book.
-
-### Target:
-- `genre` – The book's genre (e.g., mystery, fantasy, etc.)
+This project demonstrates how **machine learning** can be used to classify the genre of a book using simple metadata features. With the growing number of digital books and the need for automated categorization in online libraries, such systems can save time and improve the organization of book collections.
 
 ---
 
-## 🧠 Model Used
+## 🎯 Objective
 
-We use a **Random Forest Classifier**, which is an ensemble machine learning model that combines multiple decision trees to improve accuracy and avoid overfitting.
+To build a **supervised machine learning model** that can predict the **genre** of a book based solely on its metadata, without relying on the full text or description of the book.
 
 ---
 
-## 🛠️ Installation & Setup
+## 📝 Problem Statement
 
-1. Clone this repository:
+Given a dataset of books with metadata like:
+- Author's popularity score
+- Book length (number of pages)
+- Number of associated keywords
 
-   ```bash
-   git clone https://github.com/yourusername/book-genre-classification.git
-   cd book-genre-classification
+...the task is to classify each book into its **correct genre** such as `mystery`, `fantasy`, `romance`, etc.
+
+---
+
+## 🧠 ML Algorithm Used
+
+We use a **Random Forest Classifier** because:
+- It is robust to overfitting.
+- It works well with small-to-medium datasets.
+- It can estimate feature importance.
+- It’s easy to understand and interpret.
+
+---
+
+## 📊 Features in the Dataset
+
+| Feature Name        | Type    | Description                                                                 |
+|---------------------|---------|-----------------------------------------------------------------------------|
+| `author_popularity` | Float   | Numerical value indicating how popular the author is                        |
+| `book_length`       | Integer | Total number of pages in the book                                           |
+| `num_keywords`      | Integer | Number of metadata keywords/tags used to describe the book                  |
+| `genre`             | String  | The target class (book genre) to predict                                    |
+
+The dataset includes **100 samples** and multiple genre labels (multiclass classification).
+
+---
+
+
+
